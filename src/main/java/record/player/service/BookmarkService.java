@@ -3,6 +3,7 @@ package record.player.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import record.player.dao.Bookmark;
+import record.player.dao.User;
 import record.player.repo.BookmarkRepository;
 
 import java.util.List;
@@ -34,5 +35,9 @@ public class BookmarkService {
 
     public void deleteBookmark(Long id) {
         bookmarkRepository.deleteById(id);
+    }
+
+    public List<Bookmark> getAllBookmarks() {
+        return bookmarkRepository.findAll();
     }
 }

@@ -11,7 +11,7 @@ import java.util.List;
 @RequestMapping("/api/bookmarks")
 public class BookmarkController {
 
-    //@Autowired
+    @Autowired
     private BookmarkService bookmarkService; // Assuming you have a service that handles bookmark operations
 
     @GetMapping("/{userId}")

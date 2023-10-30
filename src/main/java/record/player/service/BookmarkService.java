@@ -10,7 +10,7 @@ import java.util.Optional;
 public class BookmarkService {
 
     // Assuming you have a repository to interact with bookmarks
-   //  @Autowired
+     @Autowired
     private BookmarkRepository bookmarkRepository;
 
 

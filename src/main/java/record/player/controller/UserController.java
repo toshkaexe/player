@@ -22,10 +22,10 @@ public class UserController {
     public User getUserBookmarks(@PathVariable Long userId) {
         return userService.getUserbyId(userId);
     }
-  /*  @GetMapping("/")
+   @GetMapping("/")
     public List<User> getAllUsers() {
         return userService.getAllUsers();
     }
-   */
+
 }
 

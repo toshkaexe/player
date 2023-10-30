@@ -1,12 +1,13 @@
 package record.player.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import record.player.dao.Bookmark;
 import record.player.repo.BookmarkRepository;
 
 import java.util.List;
 import java.util.Optional;
-
+@Service
 public class BookmarkService {
 
     // Assuming you have a repository to interact with bookmarks

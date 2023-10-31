@@ -2,8 +2,15 @@ GET http://localhost:8099
 
 
 ###
-GET http://localhost:8099/api/bookmarks/6
+GET http://localhost:8099/api/bookmarks/
 ###
 GET http://localhost:8099/api/audiobooks
 ###
 GET http://localhost:8099/api/users/
+
+###
+GET http://localhost:8099/api/bookmarks/2
+###
+GET http://localhost:8099/api/audiobooks/6
+###
+GET http://localhost:8099/api/users/5

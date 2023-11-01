@@ -7,8 +7,8 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
-@AllArgsConstructor
-@NoArgsConstructor
+//@AllArgsConstructor
+//@NoArgsConstructor
 @Getter
 @Setter
 
@@ -18,8 +18,12 @@ public class User {
     @Id
     @Column(name = "USER_ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    public Long id;
     @Column(name = "NAME")
-    private String name;
+    public String name;
+
+    public void print(){
+        System.out.println(String.format("USER: id=%s, name=%s, ", id, name);
+    }
 
 }

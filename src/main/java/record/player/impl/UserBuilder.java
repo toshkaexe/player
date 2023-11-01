@@ -4,6 +4,6 @@ import record.player.dao.User;
 
 public interface UserBuilder {
     UserBuilder setName(String name);
-    UserBuilder setID(Long id);
+    UserBuilder setID(long id);
     User build();
 }

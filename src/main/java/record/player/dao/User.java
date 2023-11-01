@@ -1,8 +1,6 @@
 package record.player.dao;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 import record.player.impl.UserBuilder;
 import record.player.impl.UserBuilderImpl;
@@ -20,7 +18,7 @@ public class User {
     @Id
     @Column(name = "USER_ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Long id;
+    public long id;
     @Column(name = "NAME")
     public String name;
 
@@ -33,8 +31,9 @@ public class User {
 
     }
 
+
     public void print(){
-        System.out.println(String.format("USER: id=%d, name=%s, ", id, name));
+        System.out.println(String.format("USER: id=%s, name=%s, ", id, name));
     }
 
     public static void main(String[] args){

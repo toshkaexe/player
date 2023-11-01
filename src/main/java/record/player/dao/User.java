@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import record.player.impl.UserBuilder;
+import record.player.impl.UserBuilderImpl;
 
 import javax.persistence.*;
 
@@ -22,8 +24,24 @@ public class User {
     @Column(name = "NAME")
     public String name;
 
-    public void print(){
-        System.out.println(String.format("USER: id=%s, name=%s, ", id, name);
+    public User(long id, String name) {
+        this.id = id;
+        this.name = name;
     }
 
+    public User() {
+
+    }
+
+    public void print(){
+        System.out.println(String.format("USER: id=%d, name=%s, ", id, name));
+    }
+
+    public static void main(String[] args){
+        User user = new UserBuilderImpl()
+                .setID(12L)
+                .setName("Ivanov Ivan Ivanovich").build();
+        user.print();
+
+    }
 }

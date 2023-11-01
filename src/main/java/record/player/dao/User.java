@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Setter
 
 @Entity
-@Table(name="USERS")
+@Table(name = "USERS")
 public class User {
     @Id
     @Column(name = "USER_ID")
@@ -32,11 +32,11 @@ public class User {
     }
 
 
-    public void print(){
+    public void print() {
         System.out.println(String.format("USER: id=%s, name=%s, ", id, name));
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         User user = new UserBuilderImpl()
                 .setID(12L)
                 .setName("Ivanov Ivan Ivanovich").build();

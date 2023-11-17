@@ -31,11 +31,12 @@ public class BookmarkController {
 
     @DeleteMapping("/{id}")
     public void deleteBookmark(@PathVariable Long id) {
-        bookmarkService.deleteBookmark(id);
+        bookmarkService.delete(id);
     }
 
     @GetMapping("/")
     public List<Bookmark> getBookmarks() {
+        
         return bookmarkService.getAllBookmarks();
     }
 }

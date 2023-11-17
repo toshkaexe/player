@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 import record.player.dao.AudioBook;
 @Service
-public class AudiobookService {
+public class AudiobookService implements record.player.service.Service {
     @Autowired
     private AudiobookRepository audiobookRepository;
 
@@ -32,13 +32,14 @@ public class AudiobookService {
     public AudioBook updateAudiobook(Long id, AudioBook updatedAudiobook) {
         Optional<AudioBook> existingAudiobook = audiobookRepository.findById(id);
         if (existingAudiobook.isPresent()) {
-            updatedAudiobook.setId(id);
+           // updatedAudiobook.setId(id);
             return audiobookRepository.save(updatedAudiobook);
         }
         return null; // Можно реализовать обработку, если аудиокниг с заданным id не найден.
     }
 
-    public void deleteAudiobook(Long id) {
+    @Override
+    public void delete(Long id) {
         audiobookRepository.deleteById(id);
     }
 }

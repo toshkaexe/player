@@ -1,4 +1,4 @@
-package record.player.tmp;
+package record.player.bootcamp;
 
 import java.util.concurrent.Semaphore;
 /*

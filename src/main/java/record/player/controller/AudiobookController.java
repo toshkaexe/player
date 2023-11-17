@@ -39,6 +39,6 @@ public class AudiobookController {
 
     @DeleteMapping("/{id}")
     public void deleteAudiobook(@PathVariable Long id) {
-        audiobookService.deleteAudiobook(id);
+        audiobookService.delete(id);
     }
 }

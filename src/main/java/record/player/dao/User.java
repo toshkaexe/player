@@ -1,5 +1,6 @@
 package record.player.dao;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import record.player.impl.UserBuilder;
@@ -11,16 +12,16 @@ import javax.persistence.*;
 //@NoArgsConstructor
 @Getter
 @Setter
-
+@Data
 @Entity
 @Table(name = "USERS")
 public class User {
     @Id
     @Column(name = "USER_ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public long id;
+    private long id;
     @Column(name = "NAME")
-    public String name;
+    private String name;
 
     public User(long id, String name) {
         this.id = id;

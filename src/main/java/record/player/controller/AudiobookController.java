@@ -12,9 +12,8 @@ import java.util.List;
 public class AudiobookController implements IAudioBook{
 
     @Autowired
-    private AudiobookService audiobookService; // Предположим, что у вас есть сервис, реализующий логику для работы с аудиокнигами.
+    private AudiobookService audiobookService;
 
-    //@Override
     @GetMapping
     public List<AudioBook> getAll() {
 

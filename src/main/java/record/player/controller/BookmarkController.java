@@ -21,8 +21,8 @@ public class BookmarkController  implements IBookmark{
     }
     @Override
     @PostMapping
-    public Bookmark add(@RequestBody Bookmark bookmark) {
-        return bookmarkService.addBookmark(bookmark);
+    public void add(@RequestBody Bookmark bookmark) {
+         bookmarkService.addBookmark(bookmark);
     }
     @Override
     @PutMapping("/{id}")
@@ -34,7 +34,7 @@ public class BookmarkController  implements IBookmark{
     public void delete(@PathVariable Long id) {
         bookmarkService.delete(id);
     }
-    @Override
+    //@Override
     @GetMapping("/")
     public List<Bookmark> getAll() {
         

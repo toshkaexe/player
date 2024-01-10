@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LearnThread {
-   public  int  value;
+   public  int  value = 0;
 
-   public void increment(){
+   public  void increment(){
         ++value;
         System.out.println(Thread.currentThread().getName() + " = "+value);
     }
@@ -24,15 +24,14 @@ public class LearnThread {
             }
         };
 
-      /* for (int i=0;i<100;i++) {
+      for (int i=0;i<100;i++) {
             new Thread(task).start();
 
         }
        System.out.println("---------");
         System.out.println("Counter result: " + learnThread.getValue());
-      */
 
-        List<Thread> threads = new ArrayList<>();
+      /*  List<Thread> threads = new ArrayList<>();
 
         for (int i = 0; i < 100; i++) {
             Thread thread = new Thread(task);
@@ -44,7 +43,7 @@ public class LearnThread {
         for (Thread thread : threads) {
             thread.join();
         }
-
+*/
         System.out.println("---------");
         System.out.println("Counter result: " + learnThread.getValue());
     }

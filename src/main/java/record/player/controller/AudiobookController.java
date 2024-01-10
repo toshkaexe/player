@@ -14,7 +14,7 @@ public class AudiobookController implements IAudioBook{
     @Autowired
     private AudiobookService audiobookService; // Предположим, что у вас есть сервис, реализующий логику для работы с аудиокнигами.
 
-    @Override
+    //@Override
     @GetMapping
     public List<AudioBook> getAll() {
 
@@ -28,9 +28,9 @@ public class AudiobookController implements IAudioBook{
     }
     @Override
     @PostMapping
-    public AudioBook add(@RequestBody AudioBook audiobook) {
+    public void add(@RequestBody AudioBook audiobook) {
 
-        return audiobookService.addAudiobook(audiobook);
+         audiobookService.addAudiobook(audiobook);
     }
 
     @Override

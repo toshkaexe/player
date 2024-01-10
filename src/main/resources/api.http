@@ -16,3 +16,8 @@ GET http://localhost:8099/api/audiobooks/6
 GET http://localhost:8099/api/users/5
 
 ###
+
+
+GET http://localhost/videos
+
+###
